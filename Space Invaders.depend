@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1343250945 source:c:\users\david\desktop\space invaders\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341435802 c:\users\david\desktop\space invaders\inicia.h
+
+1370108260 source:c:\users\david\desktop\space invaders\main.cpp
+	<allegro.h>
+	"inicia.h"
+	"disparos.h"
+
+1370109028 c:\users\david\desktop\space invaders\disparos.h
+	<allegro.h>
+
+1370109016 source:c:\users\david\desktop\space invaders\disparos.cpp
+	"disparos.h"
+	<allegro.h>
+
+1343250945 source:c:\users\david\desktop\space youtube\1 explicacion\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341435802 c:\users\david\desktop\space youtube\1 explicacion\inicia.h
+
+1370109016 source:c:\users\david\desktop\space youtube\1 explicacion\disparos.cpp
+	"disparos.h"
+	<allegro.h>
+
+1370109028 c:\users\david\desktop\space youtube\1 explicacion\disparos.h
+	<allegro.h>
+
+1343250945 source:c:\users\david\desktop\space youtube\codigo base space invadrs\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341435802 c:\users\david\desktop\space youtube\codigo base space invadrs\inicia.h
+
+1370109016 source:c:\users\david\desktop\space youtube\codigo base space invadrs\disparos.cpp
+	"disparos.h"
+	<allegro.h>
+
+1370109028 c:\users\david\desktop\space youtube\codigo base space invadrs\disparos.h
+	<allegro.h>
+
+1504284192 source:c:\users\dell\documents\megasync downloads\codigo base space invadrs\disparos.cpp
+	"disparos.h"
+	<allegro.h>
+
+1504284190 c:\users\dell\documents\megasync downloads\codigo base space invadrs\disparos.h
+	<allegro.h>
+
+1343254545 source:c:\users\dell\documents\megasync downloads\codigo base space invadrs\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341439402 c:\users\dell\documents\megasync downloads\codigo base space invadrs\inicia.h
+
+1504294860 source:c:\users\dell\documents\megasync downloads\codigo base space invadrs\main.cpp
+	<allegro.h>
+	"inicia.h"
+	"disparos.h"
+
