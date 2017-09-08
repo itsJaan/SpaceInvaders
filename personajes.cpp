@@ -3,10 +3,10 @@
 #include <allegro.h>
 
 #define ANCHO 600
-#define ALTO  375
+#define ALTO  600
 
 
-void NAVE::inicio(char* ruta_nave , char* ruta_bala, int anchob, int altob, int anchop, int altop , int x_ , int y_, int dir_bala1 , int _tipo){
+void NAVE::inicio(char* ruta_nave , char* ruta_bala, int anchob, int altob, int anchop, int altop , int x_ , int y_, int dir_bala1 , int _tipo, int _vida){
     x=x_, y=y_;
     n_disp=0 , max_disp=2;
     dir_bala=dir_bala1;
@@ -17,6 +17,8 @@ void NAVE::inicio(char* ruta_nave , char* ruta_bala, int anchob, int altob, int 
     img_nave=load_bitmap(ruta_nave,NULL);
     img_bala=load_bitmap(ruta_bala,NULL);
     tipo = _tipo;
+    vida = _vida;
+
 
 }
 bool NAVE::temporizador(int tiempo){
@@ -55,7 +57,7 @@ void acomodar_enemigos(struct NAVE enemigos[] ){
             if(_tipo == 4) _tipo = 1;
         for(int j=0; j<11 ; j++){
             indice++;
-            enemigos[indice].inicio("Recursos/enemigos.bmp","Recursos/BalaE.bmp",6,12,25,20,140+j*30,100+i*20, 8, _tipo);
+            enemigos[indice].inicio("Recursos/enemigos.bmp","Recursos/BalaE.bmp",6,12,25,20,140+j*30,130+i*20, 8, _tipo , 1);
         }
     }
 }
@@ -64,7 +66,18 @@ void pintar_enemigo(struct NAVE enemigos[], BITMAP* buffer, int mov){
     for(int i=0;i<5; i++){
         for(int j=0; j<11 ; j++){
             indice++;
+            if(enemigos[indice].vida>0)
             enemigos[indice].pinta(buffer,mov,enemigos[indice].tipo-1);
         }
     }
 }
+
+/*
+void explosion1(struct NAVE enemigo, BITMAP* buffer)
+{
+    BITMAP* parche = create_bitmap(25, 20);
+    clear_to_color(parche, 0x000000);
+    blit(parche,buffer,0,0,enemigo.x, enemigo.y , 25,20);
+    masked_blit(enemigo.exp_enem, buffer , 0,0 , enemigo.x - 10 , enemigo.y , 41,34);
+}
+*/
