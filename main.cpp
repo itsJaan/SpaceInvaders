@@ -51,8 +51,8 @@ int main(){
             */
 
             pintar_enemigo(enemigo, buffer, mov);
-            //if(enemigo[azar].n_disp == 0) azar = rand()%55;
-            //enemigo[azar].disparar(disparos_e , buffer);
+            if(enemigo[azar].n_disp == 0) azar = rand()%55;
+            enemigo[azar].disparar(disparos_e , buffer);
             if(enemigo[0].temporizador(10))
             if(++mov == 2) mov =0;
 

@@ -34,11 +34,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="diseno.cpp" />
+		<Unit filename="diseno.h" />
 		<Unit filename="disparos.cpp" />
 		<Unit filename="disparos.h" />
 		<Unit filename="inicia.cpp" />
 		<Unit filename="inicia.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="personajes.cpp" />
+		<Unit filename="personajes.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

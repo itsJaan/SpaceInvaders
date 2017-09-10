@@ -61,3 +61,120 @@
 	"inicia.h"
 	"disparos.h"
 
+1504751011 source:c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\disparos.cpp
+	"disparos.h"
+	"personajes.h"
+	<allegro.h>
+
+1504750992 c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\disparos.h
+	<allegro.h>
+	"personajes.h"
+
+1504626370 source:c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1504626370 c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\inicia.h
+
+1504789378 source:c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\main.cpp
+	<allegro.h>
+	<stdlib.h>
+	<time.h>
+	"inicia.h"
+	"disparos.h"
+	"personajes.h"
+	"diseno.h"
+
+1504788914 c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\personajes.h
+	<allegro.h>
+
+1504788903 source:c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\personajes.cpp
+	"personajes.h"
+	"disparos.h"
+	<allegro.h>
+
+1504663208 source:c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\diseno.cpp
+	"diseno.h"
+	<allegro.h>
+
+1504662804 c:\users\williampc\desktop\spaceinvaders\spaceinvaders-master\diseno.h
+	<allegro.h>
+
+1504663208 source:c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\diseno.cpp
+	"diseno.h"
+	<allegro.h>
+
+1504662804 c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\diseno.h
+	<allegro.h>
+
+1504751011 source:c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\disparos.cpp
+	"disparos.h"
+	"personajes.h"
+	<allegro.h>
+
+1504750992 c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\disparos.h
+	<allegro.h>
+	"personajes.h"
+
+1504788914 c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\personajes.h
+	<allegro.h>
+
+1504626370 source:c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1504626370 c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\inicia.h
+
+1504789378 source:c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\main.cpp
+	<allegro.h>
+	<stdlib.h>
+	<time.h>
+	"inicia.h"
+	"disparos.h"
+	"personajes.h"
+	"diseno.h"
+
+1504788903 source:c:\users\dell\downloads\spaceinvaders\spaceinvaders-master\personajes.cpp
+	"personajes.h"
+	"disparos.h"
+	<allegro.h>
+
+1504663208 source:c:\users\dell\desktop\space invadrs\diseno.cpp
+	"diseno.h"
+	<allegro.h>
+
+1504662804 c:\users\dell\desktop\space invadrs\diseno.h
+	<allegro.h>
+
+1504751011 source:c:\users\dell\desktop\space invadrs\disparos.cpp
+	"disparos.h"
+	"personajes.h"
+	<allegro.h>
+
+1504750992 c:\users\dell\desktop\space invadrs\disparos.h
+	<allegro.h>
+	"personajes.h"
+
+1504788914 c:\users\dell\desktop\space invadrs\personajes.h
+	<allegro.h>
+
+1504626370 source:c:\users\dell\desktop\space invadrs\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1504626370 c:\users\dell\desktop\space invadrs\inicia.h
+
+1505002803 source:c:\users\dell\desktop\space invadrs\main.cpp
+	<allegro.h>
+	<stdlib.h>
+	<time.h>
+	"inicia.h"
+	"disparos.h"
+	"personajes.h"
+	"diseno.h"
+
+1504788903 source:c:\users\dell\desktop\space invadrs\personajes.cpp
+	"personajes.h"
+	"disparos.h"
+	<allegro.h>
+
