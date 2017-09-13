@@ -1,5 +1,6 @@
 #include "personajes.h"
 #include "disparos.h"
+#include "diseno.h"
 #include <allegro.h>
 
 #define ANCHO 600
@@ -18,6 +19,11 @@ void NAVE::inicio(char* ruta_nave , char* ruta_bala, int anchob, int altob, int 
     img_bala=load_bitmap(ruta_bala,NULL);
     tipo = _tipo;
     vida = _vida;
+    exp_enem=load_bitmap("Recursos/pum_enemigo.bmp",NULL);
+    vidas1 = load_bitmap("Recursos/vidas.bmp",NULL);
+    vidas2 = load_bitmap("Recursos/vidas2.bmp",NULL);
+    vidas3 = load_bitmap("Recursos/vidas3.bmp",NULL);
+
 
 
 }
@@ -72,12 +78,30 @@ void pintar_enemigo(struct NAVE enemigos[], BITMAP* buffer, int mov){
     }
 }
 
-/*
-void explosion1(struct NAVE enemigo, BITMAP* buffer)
+
+void explosion1(struct NAVE enemigos, BITMAP* buffer)
 {
-    BITMAP* parche = create_bitmap(25, 20);
-    clear_to_color(parche, 0x000000);
-    blit(parche,buffer,0,0,enemigo.x, enemigo.y , 25,20);
-    masked_blit(enemigo.exp_enem, buffer , 0,0 , enemigo.x - 10 , enemigo.y , 41,34);
+    BITMAP* parche = create_bitmap(25,20);
+    clear_to_color(parche,0x000000);
+    blit(parche,buffer,0,0,enemigos.x, enemigos.y , 25,20);
+    masked_blit(enemigos.exp_enem, buffer , 0,0 , enemigos.x - 10 , enemigos.y , 41,34);
+}
+void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo){
+    BITMAP* parche2 = create_bitmap(30,20);
+    clear_to_color(parche2,0x000000);
+    for(int j=0 ; j<6 ; j++){
+        for(int i=1;i<=2;i++){
+            blit(parche2,buffer,0,0,n.x,n.y,30,20);
+            masked_blit(n.img_nave, buffer, i*30,0,n.x,n.y,30,20);
+            imprimir_fondo(fondo,buffer);
+            blit(buffer,screen,0,0,0,0,ANCHO,ALTO);
+            rest(50);
+        }
+    }
+}
+/*
+void pintar_vidas(BITMAP* buffer){
+    masket_blit(vidas1, )
 }
 */
+

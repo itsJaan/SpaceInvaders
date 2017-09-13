@@ -13,13 +13,16 @@
 int main(){
     srand(time(NULL));
     inicia_allegro(ANCHO,ALTO); // fuciones del include inicia.h
-	inicia_audio(70,70);        //
+	inicia_audio(70,70);
+
     //Pantalla principal
     BITMAP *buffer = create_bitmap(ANCHO, ALTO);
     BITMAP *portada = load_bitmap("Recursos/portada.bmp", NULL);
     BITMAP *fondo = load_bitmap("Recursos/fondo.bmp", NULL);
 
+
     PORTADA(portada);
+
     //INICIALIZANDO LAS FUNCIONES DE LAS NAVES;
     NAVE nave;
     nave.inicio("Recursos/nave.bmp","Recursos/Bala2.bmp",nave.ancho_b,nave.alto_b ,30,20 , ANCHO/2 , ALTO-70, -10 , 0 , 3);
@@ -41,14 +44,9 @@ int main(){
             nave.disparar(disparos ,buffer);
 
             for(int i=0; i < 55;i++)
-               eliminar_bala_objeto(nave,enemigo[i],disparos);
-
-
-            /* codigo con 11
-            for(int i=0; i < 55;i++)
-               if(eliminar_bala_objeto(nave,enemigo[i],disparos))
+               if(eliminar_bala_objeto(nave,enemigo[i],disparos)==true){
                 explosion1(enemigo[i],buffer);
-            */
+               }
 
             pintar_enemigo(enemigo, buffer, mov);
             if(enemigo[azar].n_disp == 0) azar = rand()%55;
@@ -56,6 +54,13 @@ int main(){
             if(enemigo[0].temporizador(10))
             if(++mov == 2) mov =0;
 
+            if(eliminar_bala_objeto(enemigo[azar],nave ,disparos_e)){
+                explosion2(nave,buffer,fondo);
+            }
+            /*if(nave.vida=3){
+
+            }
+            */
             imprimir_fondo(fondo , buffer);
 
             blit(buffer,screen, 0,0 , 0,0 ,ANCHO,ALTO );

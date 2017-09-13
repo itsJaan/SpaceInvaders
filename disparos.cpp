@@ -61,15 +61,17 @@ void elimina_bala(int& n_disparos, const int max_disparos,struct Balas disparos[
 
 
 }
-void eliminar_bala_objeto(struct NAVE& N , struct NAVE& E, struct Balas B[]){
+bool eliminar_bala_objeto(struct NAVE& N , struct NAVE& E, struct Balas B[]){
     if ( N.n_disp > 0 && N.n_disp < N.max_disp){
             for ( int cont = 1; cont <= N.n_disp; cont++){
                     if(colicion(E.x , E.y , E.ancho_p, E.alto_p, B[cont].x , B[cont].y , N.ancho_b , N.alto_b) && E.vida>0){
                         eliminar(B,N.n_disp, cont);
                         E.vida--;
+                        return true;
 
                     }
             }
 
     }
+    return false;
 }

@@ -17,8 +17,11 @@ struct NAVE{
 
         BITMAP* img_nave;
         BITMAP* img_bala;
-
-
+        BITMAP* exp_enem;
+        /*BITMAP* vidas;
+        BITMAP* vidas2;
+        BITMAP* vidas3;
+        */
         void inicio(char* ruta_nave , char* ruta_bala, int anchob , int altob , int anchoe, int altoe , int x_ ,int y_, int dir_bala1 , int _tipo , int _vida);
         bool temporizador(int tiempo);
         void pinta(BITMAP* buffer, int ix , int iy);
@@ -30,8 +33,7 @@ struct NAVE{
 
 void acomodar_enemigos(struct NAVE enemigos[] );
 void pintar_enemigo(struct NAVE enemigos[], BITMAP* buffer, int mov);
-/*
-void explosion1(struct NAVE enemigos, BITMAP* buffer);
-void explosion2(struct NAVE N, BITMAP* buffer, BITMAP* fondo);
-*/
+void explosion1(struct NAVE enemigo, BITMAP* buffer);
+void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo);
+//void pintar_vidas(BITMAP * buffer);
 #endif // PERSONAJES_H_INCLUDED
