@@ -75,3 +75,17 @@ bool eliminar_bala_objeto(struct NAVE& N , struct NAVE& E, struct Balas B[]){
     }
     return false;
 }
+void elimina_bala_escudo(struct NAVE& N , struct escudo es[] ,struct Bala B[]){
+    if ( N.n_disp > 0 && N.n_disp < N.max_disp){
+            for ( int cont = 1; cont <= N.n_disp; cont++){
+                for(int i=0;i<20;i++){
+                    if(colicion(es[i].x ,es[i].y , 20 , 16 , B[cont].x , B[cont].y , N.ancho_b , N.alto_b ) && es[i].dan < 3){
+                        elimina(B,N.n_disp,cont);
+                        es[i].dan++;
+                    }
+                }
+            }
+    }
+
+}
+

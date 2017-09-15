@@ -146,16 +146,16 @@
 1504662804 c:\users\dell\desktop\space invadrs\diseno.h
 	<allegro.h>
 
-1505263534 source:c:\users\dell\desktop\space invadrs\disparos.cpp
+1505498729 source:c:\users\dell\desktop\space invadrs\disparos.cpp
 	"disparos.h"
 	"personajes.h"
 	<allegro.h>
 
-1505263534 c:\users\dell\desktop\space invadrs\disparos.h
+1505498389 c:\users\dell\desktop\space invadrs\disparos.h
 	<allegro.h>
 	"personajes.h"
 
-1505264665 c:\users\dell\desktop\space invadrs\personajes.h
+1505497120 c:\users\dell\desktop\space invadrs\personajes.h
 	<allegro.h>
 
 1504626370 source:c:\users\dell\desktop\space invadrs\inicia.cpp
@@ -164,7 +164,7 @@
 
 1504626370 c:\users\dell\desktop\space invadrs\inicia.h
 
-1505264917 source:c:\users\dell\desktop\space invadrs\main.cpp
+1505498727 source:c:\users\dell\desktop\space invadrs\main.cpp
 	<allegro.h>
 	<stdlib.h>
 	<time.h>
@@ -173,7 +173,7 @@
 	"personajes.h"
 	"diseno.h"
 
-1505264669 source:c:\users\dell\desktop\space invadrs\personajes.cpp
+1505499155 source:c:\users\dell\desktop\space invadrs\personajes.cpp
 	"personajes.h"
 	"disparos.h"
 	"diseno.h"

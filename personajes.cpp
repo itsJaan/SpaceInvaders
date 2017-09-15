@@ -20,10 +20,6 @@ void NAVE::inicio(char* ruta_nave , char* ruta_bala, int anchob, int altob, int 
     tipo = _tipo;
     vida = _vida;
     exp_enem=load_bitmap("Recursos/pum_enemigo.bmp",NULL);
-    vidas1 = load_bitmap("Recursos/vidas.bmp",NULL);
-    vidas2 = load_bitmap("Recursos/vidas2.bmp",NULL);
-    vidas3 = load_bitmap("Recursos/vidas3.bmp",NULL);
-
 
 
 }
@@ -86,6 +82,7 @@ void explosion1(struct NAVE enemigos, BITMAP* buffer)
     blit(parche,buffer,0,0,enemigos.x, enemigos.y , 25,20);
     masked_blit(enemigos.exp_enem, buffer , 0,0 , enemigos.x - 10 , enemigos.y , 41,34);
 }
+
 void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo){
     BITMAP* parche2 = create_bitmap(30,20);
     clear_to_color(parche2,0x000000);
@@ -99,9 +96,33 @@ void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo){
         }
     }
 }
-/*
-void pintar_vidas(BITMAP* buffer){
-    masket_blit(vidas1, )
+
+void inicia_escudo(struct escudo muros[]){
+    char pos_muros[3][22] = {
+        "AEC AEC AEC AEC",
+        "B D B D B D B D",};
+    int r=0;
+    for(int i=0 ; i<20;i++){
+        for(int j=0;j<2;j++){
+            if(pos_muros[j][i]!=' '){
+                    muros[r].x=150+i*20;
+                    muros[r].y=425+j*15;
+                    muros[r].dan=0;
+                    if(pos_muros[j][i]=='A') muros[r].tipo=0;
+                    if(pos_muros[j][i]=='B')muros[r].tipo=1;
+                    if(pos_muros[j][i]=='C')muros[r].tipo=2;
+                    if(pos_muros[j][i]=='D')muros[r].tipo=3;
+                    if(pos_muros[j][i]=='E')muros[r].tipo=4;
+                    r++;
+            }
+        }
+    }
 }
-*/
+void pintar_escudos(struct escudo es[], BITMAP* img_mur, BITMAP* buffer){
+    for(int i=0; i<20; i++){
+        if(es[i].dan!=3){
+            masked_blit(img_mur ,buffer ,es[i].dan*20,es[i].tipo*16, es[i].x,es[i].y,20,16);
+        }
+    }
+}
 
