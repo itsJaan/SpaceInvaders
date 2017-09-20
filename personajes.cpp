@@ -97,32 +97,4 @@ void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo){
     }
 }
 
-void inicia_escudo(struct escudo muros[]){
-    char pos_muros[3][22] = {
-        "AEC AEC AEC AEC",
-        "B D B D B D B D",};
-    int r=0;
-    for(int i=0 ; i<20;i++){
-        for(int j=0;j<2;j++){
-            if(pos_muros[j][i]!=' '){
-                    muros[r].x=150+i*20;
-                    muros[r].y=425+j*15;
-                    muros[r].dan=0;
-                    if(pos_muros[j][i]=='A') muros[r].tipo=0;
-                    if(pos_muros[j][i]=='B')muros[r].tipo=1;
-                    if(pos_muros[j][i]=='C')muros[r].tipo=2;
-                    if(pos_muros[j][i]=='D')muros[r].tipo=3;
-                    if(pos_muros[j][i]=='E')muros[r].tipo=4;
-                    r++;
-            }
-        }
-    }
-}
-void pintar_escudos(struct escudo es[], BITMAP* img_mur, BITMAP* buffer){
-    for(int i=0; i<20; i++){
-        if(es[i].dan!=3){
-            masked_blit(img_mur ,buffer ,es[i].dan*20,es[i].tipo*16, es[i].x,es[i].y,20,16);
-        }
-    }
-}
 

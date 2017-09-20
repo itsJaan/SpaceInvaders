@@ -75,7 +75,7 @@ bool eliminar_bala_objeto(struct NAVE& N , struct NAVE& E, struct Balas B[]){
     }
     return false;
 }
-void elimina_bala_escudo(struct NAVE& N , struct escudo es[] ,struct Bala B[]){
+/*void elimina_bala_escudo(struct NAVE& N , struct escudo es[] ,struct Bala B[]){
     if ( N.n_disp > 0 && N.n_disp < N.max_disp){
             for ( int cont = 1; cont <= N.n_disp; cont++){
                 for(int i=0;i<20;i++){
@@ -87,5 +87,5 @@ void elimina_bala_escudo(struct NAVE& N , struct escudo es[] ,struct Bala B[]){
             }
     }
 
-}
+}*/
 
