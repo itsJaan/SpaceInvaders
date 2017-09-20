@@ -32,14 +32,7 @@ void acomodar_enemigos(struct NAVE enemigos[] );
 void pintar_enemigo(struct NAVE enemigos[], BITMAP* buffer, int mov);
 void explosion1(struct NAVE enemigo, BITMAP* buffer);
 void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo);
+//void gameOver(struct NAVE n, BITMAP* buffer , BITMAP* fondo);
 
-/*struct escudo{
-    int x, y;
-    int dan;
-    int tipo;
 
-};
-void inicia_escudo(struct escudo muros[]);
-void pintar_escudos(struct escudo es[], BITMAP* img_mur, BITMAP* buffer);
-*/
 #endif // PERSONAJES_H_INCLUDED

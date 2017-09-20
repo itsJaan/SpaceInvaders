@@ -59,7 +59,7 @@ void acomodar_enemigos(struct NAVE enemigos[] ){
             if(_tipo == 4) _tipo = 1;
         for(int j=0; j<11 ; j++){
             indice++;
-            enemigos[indice].inicio("Recursos/enemigos.bmp","Recursos/BalaE.bmp",6,12,25,20,140+j*30,130+i*20, 8, _tipo , 1);
+            enemigos[indice].inicio("Recursos/enemigos.bmp","Recursos/BalaE.bmp",6,12,25,20,140+j*30,150+i*20,8, _tipo , 1);
         }
     }
 }
@@ -96,5 +96,4 @@ void explosion2(struct NAVE n, BITMAP* buffer, BITMAP* fondo){
         }
     }
 }
-
 
