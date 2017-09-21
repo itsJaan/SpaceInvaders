@@ -3,6 +3,8 @@
 #define DISENO_H_INCLUDED
 
 void PORTADA(BITMAP* p);
+
+void imprimir_win(BITMAP* w, BITMAP* buffer);
 void imprimir_gameover(BITMAP*g, BITMAP* buffer);
 void imprimir_fondo(BITMAP* fondo , BITMAP* buffer);
 #endif // DISENO_H_INCLUDED
