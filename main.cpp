@@ -21,6 +21,7 @@ int main(){
     BITMAP *portada = load_bitmap("Recursos/portada.bmp", NULL);
     BITMAP *fondo = load_bitmap("Recursos/fondo.bmp", NULL);
     BITMAP *gameOVER = load_bitmap("Recursos/GameOver.bmp", NULL);
+    BITMAP *win = load_bitmap("Recursos/Win.bmp", NULL);
     MIDI* musica_fondo= load_midi("Recursos/mortal.mid");
     play_midi(musica_fondo,1);
 
@@ -45,6 +46,7 @@ int main(){
 
             nave.pinta(buffer,0,0);
             nave.mover();
+
             if(key[KEY_SPACE] && nave.temporizador(5))
             crear_bala(nave.n_disp , nave.max_disp , disparos , nave.x , nave.y , nave.dir_bala);
             nave.disparar(disparos ,buffer);
@@ -57,18 +59,28 @@ int main(){
             pintar_enemigo(enemigo, buffer, mov);
             if(enemigo[azar].n_disp == 0) azar = rand()%55;
             enemigo[azar].disparar(disparos_e , buffer);
+             //TEMPORIZAR es el movimiento de los aliens
             if(enemigo[0].temporizador(10))
             if(++mov == 2) mov =0;
             if(eliminar_bala_objeto(enemigo[azar],nave ,disparos_e)){
                 explosion2(nave,buffer,fondo);
             }
-
+                //pantalla de gameover
             if(nave.vida==0){
                     imprimir_gameover(gameOVER , buffer);
-            if(key[KEY_SPACE]){
-                    
-                    }
             }
+            
+            //pantalla de win
+            int contador=0;
+            for(int e=0; e < 55;e++){
+                if(enemigo[e].vida==0){
+                    contador++;
+                }
+                if(contador==55){
+                    imprimir_win(win , buffer);
+                }
+            }
+
 
             imprimir_fondo(fondo , buffer);
             blit(buffer,screen, 0,0 , 0,0 ,ANCHO,ALTO );
@@ -78,4 +90,3 @@ int main(){
 
 	return 0;
 }
-END_OF_MAIN();
