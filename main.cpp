@@ -10,6 +10,7 @@
 #define ALTO  600
 
 
+
 int main(){
     srand(time(NULL));
     inicia_allegro(ANCHO,ALTO); // fuciones del include inicia.h
@@ -19,7 +20,8 @@ int main(){
     BITMAP *buffer = create_bitmap(ANCHO, ALTO);
     BITMAP *portada = load_bitmap("Recursos/portada.bmp", NULL);
     BITMAP *fondo = load_bitmap("Recursos/fondo.bmp", NULL);
-    MIDI* musica_fondo= load_midi("Recursos/cancion2.mid");
+    BITMAP *gameOVER = load_bitmap("Recursos/GameOver.bmp", NULL);
+    MIDI* musica_fondo= load_midi("Recursos/mortal.mid");
     play_midi(musica_fondo,1);
 
 
@@ -31,12 +33,11 @@ int main(){
     Balas disparos_e[enemigo[1].max_disp];
     int azar = rand()%40;
     int mov=0;
+    int dir=-5;
 
     NAVE nave;
     nave.inicio("Recursos/nave.bmp","Recursos/Bala2.bmp",nave.ancho_b,nave.alto_b ,30,20 , ANCHO/2 , ALTO-70, -10 , 0 , 3);
     Balas disparos[nave.max_disp];
-
-
 
 
     while(!key[KEY_ESC]){//El juego se estara ejecuntando hasta que se presione el Boton ESC
@@ -60,6 +61,13 @@ int main(){
             if(++mov == 2) mov =0;
             if(eliminar_bala_objeto(enemigo[azar],nave ,disparos_e)){
                 explosion2(nave,buffer,fondo);
+            }
+
+            if(nave.vida==0){
+                    imprimir_gameover(gameOVER , buffer);
+            if(key[KEY_SPACE]){
+                    
+                    }
             }
 
             imprimir_fondo(fondo , buffer);
