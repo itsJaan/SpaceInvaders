@@ -32,3 +32,6 @@ void imprimir_fondo(BITMAP* fondo , BITMAP* buffer){
 void imprimir_gameover(BITMAP* g , BITMAP* buffer){
     masked_blit(g , buffer , 0,0,0,0, 600,600);
 }
+void imprimir_win(BITMAP* w , BITMAP* buffer){
+    masked_blit(w , buffer , 0,0,0,0, 600,600);
+}
